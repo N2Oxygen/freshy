@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Freshy — Rasakan Momennya</title>
+  <meta name="description"
+    content="Freshy adalah minuman premium dengan 4 rasa unik yang menyegarkan. Dibuat dari bahan asli, tanpa kompromi. Rasakan momennya." />
+  <link rel="stylesheet" href="index.css" />
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍋</text></svg>" />
+</head>
+
+<body>
+  <!-- ============================================
+       NAVIGATION
+       ============================================ -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="#" class="nav-logo">Freshy</a>
+      <div class="nav-links">
+        <a href="#flavors">Rasa</a>
+        <a href="#about">Tentang</a>
+        <a href="#gallery">Galeri</a>
+        <a href="#testimonials">Testimoni</a>
+      </div>
+      <div class="nav-hamburger" id="hamburger" aria-label="Menu navigasi">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#flavors" class="mobile-link">Rasa</a>
+    <a href="#about" class="mobile-link">Tentang</a>
+    <a href="#gallery" class="mobile-link">Galeri</a>
+    <a href="#testimonials" class="mobile-link">Testimoni</a>
+  </div>
+
+  <!-- ============================================
+       HERO SECTION
+       ============================================ -->
+  <section class="hero" id="hero">
+    <div class="hero-content">
+      <h1 class="hero-title">
+        Rasakan<br /><span class="highlight">Momennya.</span>
+      </h1>
+      <p class="hero-description">
+        Segar. Berani. Tanpa Kompromi. Empat rasa unik yang dibuat dari bahan alami untuk menemani setiap momenmu.
+      </p>
+      <div class="hero-buttons">
+        <a href="#flavors" class="btn btn-primary">
+          Jelajahi Rasa
+        </a>
+        <a href="#about" class="btn btn-secondary">
+          Cerita Kami
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       FLAVORS SECTION
+       ============================================ -->
+  <section class="section flavors" id="flavors">
+    <div class="container">
+      <div class="flavors-header">
+        <div class="section-label reveal">Koleksi Rasa</div>
+        <h2 class="section-title reveal reveal-delay-1">Empat Rasa, Satu Misi:<br />Menyegarkan Harimu</h2>
+        <p class="section-subtitle reveal reveal-delay-2">Setiap rasa dirancang khusus dengan bahan alami terbaik untuk
+          memberikan pengalaman minum yang tak terlupakan.</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="flavors-grid reveal reveal-delay-3">
+        <!-- Citrus Surge Card -->
+        <div class="flavor-card card-citrus">
+          <div class="flavor-card-visual">
+            <div class="flavor-card-circle"></div>
+            <img src="images/citrus-bottle.png" alt="Citrus Surge — Botol Freshy rasa jeruk lemon" class="flavor-card-img" />
+          </div>
+          <div class="flavor-card-content">
+            <h3 class="flavor-card-title">🍊 Jeruk</h3>
+            <span class="flavor-card-tagline">"Bangunkan indra perasamu."</span>
+            <p class="flavor-card-desc">Perpaduan lemon segar, jeruk darah, dan sentuhan yuzu yang membuat setiap tegukan penuh energi.</p>
+            <div class="flavor-card-badges">
+              <span class="flavor-badge">Lemon Asli</span>
+              <span class="flavor-badge">Jeruk Darah</span>
+              <span class="flavor-badge">Yuzu</span>
+              <span class="flavor-badge">Sparkling</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Berry Bliss Card -->
+        <div class="flavor-card card-berry">
+          <div class="flavor-card-visual">
+            <div class="flavor-card-circle"></div>
+            <img src="images/berry-bottle.png" alt="Berry Bliss — Botol Freshy rasa beri" class="flavor-card-img" />
+          </div>
+          <div class="flavor-card-content">
+            <h3 class="flavor-card-title">🍓 Stroberi</h3>
+            <span class="flavor-card-tagline">"Kelezatan yang mendalam."</span>
+            <p class="flavor-card-desc">Fusi yang kaya dari blueberry liar, blackcurrant, dan açaí. Manis dengan kedalaman rasa yang menggoda.</p>
+            <div class="flavor-card-badges">
+              <span class="flavor-badge">Blueberry Liar</span>
+              <span class="flavor-badge">Blackcurrant</span>
+              <span class="flavor-badge">Açaí</span>
+              <span class="flavor-badge">Antioksidan</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mint Chill Card -->
+        <div class="flavor-card card-mint">
+          <div class="flavor-card-visual">
+            <div class="flavor-card-circle"></div>
+            <img src="images/mint-bottle.png" alt="Mint Chill — Botol Freshy rasa mint" class="flavor-card-img" />
+          </div>
+          <div class="flavor-card-content">
+            <h3 class="flavor-card-title">🍈 Melon</h3>
+            <span class="flavor-card-tagline">"Dingin dari dalam."</span>
+            <p class="flavor-card-desc">Spearmint segar, air mentimun, dan sentuhan lidah buaya. Definisi kesejukan yang sesungguhnya.</p>
+            <div class="flavor-card-badges">
+              <span class="flavor-badge">Spearmint</span>
+              <span class="flavor-badge">Mentimun</span>
+              <span class="flavor-badge">Lidah Buaya</span>
+              <span class="flavor-badge">Tanpa Gula</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mango Sunset Card -->
+        <div class="flavor-card card-mango">
+          <div class="flavor-card-visual">
+            <div class="flavor-card-circle"></div>
+            <img src="images/mango-bottle.png" alt="Mango Sunset — Botol Freshy rasa mangga" class="flavor-card-img" />
+          </div>
+          <div class="flavor-card-content">
+            <h3 class="flavor-card-title">🫐 Blueberry</h3>
+            <span class="flavor-card-tagline">"Golden hour dalam botol."</span>
+            <p class="flavor-card-desc">Mangga Alphonso matang, markisa, dan sentuhan kunyit. Kehangatan tropis, emas cair.</p>
+            <div class="flavor-card-badges">
+              <span class="flavor-badge">Mangga Alphonso</span>
+              <span class="flavor-badge">Markisa</span>
+              <span class="flavor-badge">Kunyit</span>
+              <span class="flavor-badge">Vitamin C</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       ABOUT SECTION
+       ============================================ -->
+  <section class="section about" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text">
+          <div class="section-label reveal">Tentang Kami</div>
+          <h2 class="section-title reveal reveal-delay-1">Dibuat dengan <span>Bahan Asli</span> & Cinta Nyata</h2>
+          <p class="about-description reveal reveal-delay-2">
+            Freshy lahir dari keyakinan sederhana: minuman seharusnya segar, jujur, dan luar biasa. Kami memilih
+            buah-buahan terbaik dari petani lokal, tanpa bahan pengawet, tanpa pewarna buatan — hanya kebaikan murni
+            dalam setiap tetes.
+          </p>
+
+          <div class="about-values reveal reveal-delay-3">
+            <div class="value-item">
+              <span class="value-icon">🍃</span>
+              <span class="value-label">Bahan Alami</span>
+            </div>
+            <div class="value-item">
+              <span class="value-icon">⚡</span>
+              <span class="value-label">Rasa Berani</span>
+            </div>
+            <div class="value-item">
+              <span class="value-icon">💎</span>
+              <span class="value-label">Tanpa Kompromi</span>
+            </div>
+          </div>
+
+          <div class="about-counters reveal reveal-delay-4">
+            <div class="counter-item">
+              <div class="counter-value" data-target="4">0</div>
+              <div class="counter-label">Rasa Unik</div>
+            </div>
+            <div class="counter-item">
+              <div class="counter-value" data-target="0" data-suffix="g">0g</div>
+              <div class="counter-label">Gula Tambahan</div>
+            </div>
+            <div class="counter-item">
+              <div class="counter-value" data-target="100" data-suffix="%">0%</div>
+              <div class="counter-label">Kesegaran</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-visual reveal reveal-delay-2">
+          <div class="gallery-placeholder"
+            style="width:100%;height:100%;background:#F3F4F6;display:flex;align-items:center;justify-content:center;font-size:5rem;">
+            🍹</div>
+          <div class="about-floating-card">
+            <span class="emoji">🌱</span>
+            <p>Dari <strong>petani lokal</strong> langsung ke tanganmu. Segar, alami, dan bertanggung jawab.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       GALLERY SECTION
+       ============================================ -->
+  <section class="section gallery" id="gallery">
+    <div class="container">
+      <div class="gallery-header">
+        <div class="section-label reveal">Galeri</div>
+        <h2 class="section-title reveal reveal-delay-1">Momen Bersama Freshy</h2>
+        <p class="section-subtitle reveal reveal-delay-2">Setiap momen jadi lebih istimewa dengan Freshy. Lihat
+          bagaimana orang-orang menikmati kesegaran kami.</p>
+      </div>
+
+      <div class="gallery-grid stagger-children">
+        <div class="gallery-item featured reveal">
+          <img src="images/gallery-1.png" alt="Freshy di pantai saat matahari terbenam" />
+          <div class="gallery-item-overlay">
+            <p>Senja di Pantai ✨</p>
+          </div>
+        </div>
+        <div class="gallery-item reveal">
+          <img src="images/gallery-2.png" alt="Piknik seru dengan Freshy" />
+          <div class="gallery-item-overlay">
+            <p>Piknik Seru 🧺</p>
+          </div>
+        </div>
+        <div class="gallery-item reveal">
+          <div class="gallery-placeholder"
+            style="width:100%;height:100%;background:linear-gradient(135deg,#1A1A2E 0%,#16213E 40%,#7B2D8E 100%);display:flex;align-items:center;justify-content:center;font-size:4rem;">
+            🌃</div>
+          <div class="gallery-item-overlay">
+            <p>Rooftop Vibes 🌃</p>
+          </div>
+        </div>
+        <div class="gallery-item reveal">
+          <div class="gallery-placeholder"
+            style="width:100%;height:100%;background:linear-gradient(135deg,#FDF6EC 0%,#FFE082 40%,#FF8C00 100%);display:flex;align-items:center;justify-content:center;font-size:4rem;">
+            ☀️</div>
+          <div class="gallery-item-overlay">
+            <p>Pagi Cerah ☀️</p>
+          </div>
+        </div>
+        <div class="gallery-item featured reveal">
+          <div class="gallery-placeholder"
+            style="width:100%;height:100%;background:linear-gradient(135deg,#00C9A7 0%,#FFD93D 50%,#FF6F61 100%);display:flex;align-items:center;justify-content:center;font-size:4rem;">
+            🎉</div>
+          <div class="gallery-item-overlay">
+            <p>Kumpul Bareng 🎉</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       TESTIMONIALS SECTION
+       ============================================ -->
+  <section class="section testimonials" id="testimonials">
+    <!-- Star Particles Removed -->
+
+    <div class="container">
+      <div class="testimonials-header">
+        <div class="section-label reveal" style="justify-content: center;">Testimoni</div>
+        <h2 class="section-title reveal reveal-delay-1">Apa Kata Mereka?</h2>
+        <p class="section-subtitle reveal reveal-delay-2">Ribuan orang sudah merasakan kesegaran Freshy. Ini cerita
+          mereka.</p>
+      </div>
+    </div>
+
+    <div class="testimonial-track-wrapper">
+      <div class="testimonial-track" id="testimonialTrack">
+        <!-- Set 1 -->
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+          </div>
+          <p class="testimonial-quote">"Citrus Surge-nya luar biasa! Setiap pagi jadi lebih semangat. Rasanya segar
+            banget, bukan segar yang dibuat-buat."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">AS</div>
+            <div>
+              <div class="testimonial-name">Andi Santoso</div>
+              <div class="testimonial-location">Jakarta, Indonesia</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+          </div>
+          <p class="testimonial-quote">"Berry Bliss itu favoritku! Warnanya cantik, rasanya kayak dessert tapi sehat.
+            Ketagihan abis!"</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">MP</div>
+            <div>
+              <div class="testimonial-name">Maya Putri</div>
+              <div class="testimonial-location">Bandung, Indonesia</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+          </div>
+          <p class="testimonial-quote">"Mint Chill bikin adem di cuaca panas Jakarta. Serius, ini minuman paling
+            menyegarkan yang pernah aku coba."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">RH</div>
+            <div>
+              <div class="testimonial-name">Rizky Hakim</div>
+              <div class="testimonial-location">Surabaya, Indonesia</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+          </div>
+          <p class="testimonial-quote">"Mango Sunset itu kayak liburan di Bali dalam satu tegukan. Tropis, manis pas,
+            dan bikin happy!"</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">DS</div>
+            <div>
+              <div class="testimonial-name">Dian Sari</div>
+              <div class="testimonial-location">Yogyakarta, Indonesia</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+          </div>
+          <p class="testimonial-quote">"Aku suka semua rasanya! Packaging-nya juga kece. Cocok buat hadiah atau diminum
+            sendiri. Premium banget."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">BW</div>
+            <div>
+              <div class="testimonial-name">Bayu Wicaksono</div>
+              <div class="testimonial-location">Bali, Indonesia</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+          </div>
+          <p class="testimonial-quote">"Beli pertama kali iseng, sekarang langganan. Citrus Surge + Mint Chill jadi
+            combo andalan setiap minggu!"</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">NR</div>
+            <div>
+              <div class="testimonial-name">Nadia Rahma</div>
+              <div class="testimonial-location">Semarang, Indonesia</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Duplicate set for seamless marquee -->
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+          </div>
+          <p class="testimonial-quote">"Citrus Surge-nya luar biasa! Setiap pagi jadi lebih semangat. Rasanya segar
+            banget, bukan segar yang dibuat-buat."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">AS</div>
+            <div>
+              <div class="testimonial-name">Andi Santoso</div>
+              <div class="testimonial-location">Jakarta, Indonesia</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+          </div>
+          <p class="testimonial-quote">"Berry Bliss itu favoritku! Warnanya cantik, rasanya kayak dessert tapi sehat.
+            Ketagihan abis!"</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">MP</div>
+            <div>
+              <div class="testimonial-name">Maya Putri</div>
+              <div class="testimonial-location">Bandung, Indonesia</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+          </div>
+          <p class="testimonial-quote">"Mint Chill bikin adem di cuaca panas Jakarta. Serius, ini minuman paling
+            menyegarkan yang pernah aku coba."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">RH</div>
+            <div>
+              <div class="testimonial-name">Rizky Hakim</div>
+              <div class="testimonial-location">Surabaya, Indonesia</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+          </div>
+          <p class="testimonial-quote">"Mango Sunset itu kayak liburan di Bali dalam satu tegukan. Tropis, manis pas,
+            dan bikin happy!"</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">DS</div>
+            <div>
+              <div class="testimonial-name">Dian Sari</div>
+              <div class="testimonial-location">Yogyakarta, Indonesia</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+          </div>
+          <p class="testimonial-quote">"Aku suka semua rasanya! Packaging-nya juga kece. Cocok buat hadiah atau diminum
+            sendiri. Premium banget."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">BW</div>
+            <div>
+              <div class="testimonial-name">Bayu Wicaksono</div>
+              <div class="testimonial-location">Bali, Indonesia</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+          </div>
+          <p class="testimonial-quote">"Beli pertama kali iseng, sekarang langganan. Citrus Surge + Mint Chill jadi
+            combo andalan setiap minggu!"</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">NR</div>
+            <div>
+              <div class="testimonial-name">Nadia Rahma</div>
+              <div class="testimonial-location">Semarang, Indonesia</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       ORDER / CTA SECTION
+       ============================================ -->
+  <section class="section order" id="order">
+    <div class="container">
+      <div class="order-content">
+        <div class="section-label reveal" style="justify-content: center;">Pesan Sekarang</div>
+        <h2 class="section-title reveal reveal-delay-1">Siap Menyegarkan<br />Harimu?</h2>
+
+
+        <div class="email-capture reveal reveal-delay-5">
+          <input type="email" placeholder="Masukkan email untuk info promo..." id="emailInput" />
+          <button class="btn btn-primary" id="emailSubmit">Daftar</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       FOOTER
+       ============================================ -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Brand -->
+        <div class="footer-brand">
+          <a href="#" class="nav-logo">Freshy</a>
+          <p>Minuman premium dengan bahan alami terbaik. Dibuat untuk mereka yang menghargai kesegaran sejati. Rasakan
+            momennya.</p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Navigasi</h4>
+          <div class="footer-links">
+            <a href="#flavors">Rasa</a>
+            <a href="#about">Tentang</a>
+            <a href="#gallery">Galeri</a>
+            <a href="#testimonials">Testimoni</a>
+            <a href="#order">Pesan</a>
+          </div>
+        </div>
+
+
+
+        <!-- Newsletter -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Newsletter</h4>
+          <div class="footer-newsletter">
+            <input type="email" placeholder="Email kamu..." />
+            <button class="btn btn-primary">Berlangganan</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Freshy Co. · Dibuat dengan buah asli dan cinta nyata.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Kebijakan Privasi</a>
+          <a href="#">Syarat & Ketentuan</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top -->
+  <button class="scroll-top" id="scrollTop" aria-label="Kembali ke atas">↑</button>
+
+  <!-- Mobile Sticky CTA -->
+  <div class="mobile-sticky-cta" id="mobileCta">
+    <a href="#order" class="btn btn-primary btn-rounded">Pesan Sekarang</a>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
