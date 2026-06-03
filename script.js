@@ -125,22 +125,28 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ============================================
-  // MOBILE STICKY CTA
+  // STICKY CTA (All Devices)
   // ============================================
-  const mobileCta = document.getElementById('mobileCta');
+  const stickyCta = document.getElementById('stickyCta');
+  let ctaTicking = false;
 
-  const handleMobileCta = () => {
-    const scrollY = window.scrollY;
-    const heroHeight = heroSection ? heroSection.offsetHeight : 600;
+  const handleStickyCta = () => {
+    if (ctaTicking) return;
+    ctaTicking = true;
+    requestAnimationFrame(() => {
+      const scrollY = window.scrollY;
+      const heroHeight = heroSection ? heroSection.offsetHeight : 600;
 
-    if (scrollY > heroHeight && window.innerWidth <= 768) {
-      mobileCta.classList.add('visible');
-    } else {
-      mobileCta.classList.remove('visible');
-    }
+      if (scrollY > heroHeight) {
+        stickyCta.classList.add('visible');
+      } else {
+        stickyCta.classList.remove('visible');
+      }
+      ctaTicking = false;
+    });
   };
 
-  window.addEventListener('scroll', handleMobileCta, { passive: true });
+  window.addEventListener('scroll', handleStickyCta, { passive: true });
 
   // ============================================
   // SMOOTH SCROLL for all anchor links
