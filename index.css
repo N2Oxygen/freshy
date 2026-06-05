@@ -198,6 +198,9 @@ button {
 }
 
 .nav-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
   font-family: var(--font-display);
   font-size: 2rem;
   font-weight: 800;
@@ -208,6 +211,13 @@ button {
 
 .nav-logo:hover {
   transform: translateY(-2px);
+}
+
+.navbar-logo-img {
+  height: 42px;
+  width: auto;
+  object-fit: contain;
+  display: block;
 }
 
 .nav-links {
@@ -369,31 +379,28 @@ button {
   inset: 0;
   z-index: 0;
   overflow: hidden;
+  background-image: url('images/hero.jpeg');
+  background-size: cover;
+  background-position: right center;
 }
 
-.hero-gradient {
+.hero-overlay {
   position: absolute;
-  inset: -50%;
-  background: 
-    radial-gradient(ellipse at 20% 50%, rgba(255, 217, 61, 0.1) 0%, transparent 50%),
-    radial-gradient(ellipse at 80% 20%, rgba(233, 30, 140, 0.06) 0%, transparent 50%),
-    radial-gradient(ellipse at 50% 80%, rgba(0, 201, 167, 0.08) 0%, transparent 50%),
-    radial-gradient(ellipse at 70% 60%, rgba(255, 111, 97, 0.05) 0%, transparent 50%);
-  animation: heroGradientShift 12s ease-in-out infinite alternate;
-}
-
-@keyframes heroGradientShift {
-  0% { transform: translate(0, 0) scale(1); }
-  33% { transform: translate(2%, -3%) scale(1.05); }
-  66% { transform: translate(-2%, 2%) scale(1.02); }
-  100% { transform: translate(1%, -1%) scale(1.07); }
+  inset: 0;
+  background: linear-gradient(90deg, 
+    rgba(255, 253, 248, 1) 0%, 
+    rgba(255, 253, 248, 0.95) 25%, 
+    rgba(255, 253, 248, 0.6) 45%, 
+    rgba(255, 253, 248, 0) 70%
+  );
+  z-index: 1;
 }
 
 /* Floating Fruits */
 .floating-elements {
   position: absolute;
   inset: 0;
-  z-index: 1;
+  z-index: 2;
   pointer-events: none;
 }
 
@@ -421,12 +428,24 @@ button {
   75% { transform: translateY(-25px) rotate(3deg); }
 }
 
-/* Hero Content */
-.hero-content {
+/* Hero Container (Grid Layout) */
+.hero-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
   position: relative;
   z-index: 2;
-  max-width: 800px;
-  padding: 0 24px;
+  width: 100%;
+  padding-top: 130px; /* Offset navbar */
+  padding-bottom: 40px;
+}
+
+.hero-content {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 580px; /* limit width of text for readability */
 }
 
 @keyframes pulse {
@@ -453,9 +472,104 @@ button {
   font-size: clamp(1rem, 2vw, 1.25rem);
   color: var(--text-muted);
   max-width: 520px;
-  margin: 0 auto 40px;
+  margin: 0 0 40px;
   line-height: 1.7;
   animation: fadeSlideUp 1.2s var(--ease-out-expo) 0.3s both;
+}
+/* Scroll Down Indicator */
+.scroll-down {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  color: var(--text-dark);
+  text-decoration: none;
+  cursor: pointer;
+  z-index: 10;
+  animation: scrollDownFadeIn 1.2s var(--ease-out-expo) 0.5s both;
+  transition: opacity 0.3s var(--ease-smooth), transform 0.3s var(--ease-smooth);
+}
+
+.scroll-down:hover {
+  transform: translate(-50%, 4px);
+}
+
+/* Stylized Bottle silhouette representing a mouse / bottle outline */
+.scroll-down-bottle {
+  width: 24px;
+  height: 42px;
+  border: 2px solid var(--text-dark);
+  border-radius: 12px 12px 8px 8px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding-top: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Droplet animation representing a drink droplet sliding down inside the bottle */
+.scroll-down-droplet {
+  width: 4px;
+  height: 8px;
+  background: var(--text-dark);
+  border-radius: 2px;
+  animation: dropletSlide 2.4s cubic-bezier(0.25, 1, 0.5, 1) infinite;
+}
+
+.scroll-down-arrow {
+  color: var(--text-dark);
+  animation: arrowBounce 2s ease-in-out infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes dropletSlide {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+    height: 4px;
+  }
+  15% {
+    opacity: 1;
+    height: 8px;
+  }
+  65% {
+    transform: translateY(16px);
+    opacity: 1;
+    height: 6px;
+  }
+  85%, 100% {
+    transform: translateY(20px);
+    opacity: 0;
+    height: 4px;
+  }
+}
+
+@keyframes arrowBounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+}
+
+@keyframes scrollDownFadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 24px);
+    filter: blur(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+    filter: blur(0);
+  }
 }
 
 .hero-buttons {
@@ -538,7 +652,7 @@ button {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 32px;
-  margin-top: 48px;
+  margin-top: 100px;
 }
 
 .flavor-card {
@@ -547,24 +661,26 @@ button {
   border-radius: var(--radius-lg);
   display: flex;
   flex-direction: column;
-  overflow: hidden;
+  overflow: visible;
   transition: transform 0.5s var(--ease-out-expo);
   height: 100%;
 }
 
 .flavor-card-visual {
   position: relative;
-  height: 460px;
+  height: 280px;
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
+  overflow: visible;
   transition: background 0.6s var(--ease-out-expo);
 }
 
 .flavor-card-circle {
-  display: block;
+  display: none;
   position: absolute;
+  top: 0; bottom: 0; left: 0; right: 0;
+  margin: auto;
   width: 240px;
   height: 240px;
   border-radius: 50%;
@@ -575,12 +691,13 @@ button {
 }
 
 .flavor-card-img {
-  height: 98%;
+  height: 100%;
   width: auto;
   object-fit: contain;
   z-index: 2;
   transition: transform 0.6s var(--ease-out-expo);
   padding: 12px 0;
+  transform-origin: center center;
 }
 
 .flavor-card-content {
@@ -638,18 +755,18 @@ button {
   transition: all 0.3s var(--ease-smooth);
 }
 
-/* Card Specifics (Simple Flow Gradients) */
+/* Card Specifics (Background removed, just glow) */
 .card-citrus .flavor-card-visual {
-  background: linear-gradient(185deg, #FFF8F0 0%, #FFE5CC 100%);
+  background: transparent;
 }
 .card-berry .flavor-card-visual {
-  background: linear-gradient(185deg, #FFF0F0 0%, #FFD9D9 100%);
+  background: transparent;
 }
 .card-mint .flavor-card-visual {
-  background: linear-gradient(185deg, #F4FDF4 0%, #DFF4DF 100%);
+  background: transparent;
 }
 .card-mango .flavor-card-visual {
-  background: linear-gradient(185deg, #F0F4FF 0%, #DCE6FF 100%);
+  background: transparent;
 }
 
 .flavor-card:hover {
@@ -667,16 +784,16 @@ button {
 
 /* Card Hover Gradients */
 .card-citrus:hover .flavor-card-visual {
-  background: linear-gradient(185deg, #FFE5CC 0%, #FFD2A6 100%);
+  background: transparent;
 }
 .card-berry:hover .flavor-card-visual {
-  background: linear-gradient(185deg, #FFD9D9 0%, #FFC2C2 100%);
+  background: transparent;
 }
 .card-mint:hover .flavor-card-visual {
-  background: linear-gradient(185deg, #DFF4DF 0%, #C9ECC9 100%);
+  background: transparent;
 }
 .card-mango:hover .flavor-card-visual {
-  background: linear-gradient(185deg, #DCE6FF 0%, #C7D7FF 100%);
+  background: transparent;
 }
 
 /* Card Circle Colors */
@@ -1484,6 +1601,33 @@ button {
     display: flex;
   }
 
+  .hero-container {
+    justify-content: center;
+    padding-top: 110px;
+    padding-bottom: 40px;
+  }
+
+  .hero-content {
+    text-align: center;
+    align-items: center;
+    max-width: 100%;
+  }
+
+  .hero-content .hero-description {
+    margin: 0 auto 32px;
+  }
+
+  .hero-content .scroll-down {
+    align-self: center;
+  }
+
+  .hero-overlay {
+    background: linear-gradient(180deg, 
+      rgba(255, 253, 248, 0.96) 0%, 
+      rgba(255, 253, 248, 0.88) 100%
+    );
+  }
+
   .hero-title {
     font-size: clamp(3.8rem, 8vw, 5rem);
   }
@@ -1526,6 +1670,19 @@ button {
     --container-padding: 16px;
   }
 
+  .navbar {
+    padding: 16px 0;
+  }
+
+  .nav-logo {
+    font-size: 1.65rem;
+    gap: 8px;
+  }
+
+  .navbar-logo-img {
+    height: 32px;
+  }
+
   .hero {
     min-height: 100svh;
   }
@@ -1537,6 +1694,8 @@ button {
   .hero-description {
     font-size: 0.95rem;
   }
+
+
 
   .hero-buttons {
     flex-direction: column;
@@ -1559,7 +1718,7 @@ button {
   }
 
   .flavor-card-visual {
-    height: 440px;
+    height: 260px;
   }
 
   .about-values {
