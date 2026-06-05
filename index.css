@@ -471,7 +471,7 @@ button {
   letter-spacing: -0.04em;
   color: var(--text-dark);
   margin-bottom: 24px;
-  animation: fadeSlideUp 1.2s var(--ease-out-expo) 0.2s both;
+  animation: fadeSlideUp 1.6s cubic-bezier(0.7, 0, 0.3, 1) 0.4s both;
 }
 
 .hero-title .highlight {
@@ -484,50 +484,25 @@ button {
   max-width: 520px;
   margin: 0 0 40px;
   line-height: 1.7;
-  animation: fadeSlideUp 1.2s var(--ease-out-expo) 0.3s both;
+  animation: fadeSlideUp 1.6s cubic-bezier(0.7, 0, 0.3, 1) 0.6s both;
 }
 /* Scroll Down Indicator */
 .scroll-down {
-  position: absolute;
-  bottom: 40px;
-  left: 50%;
-  transform: translate(-50%, 0);
   display: inline-flex;
   flex-direction: column;
   align-items: center;
+  align-self: center; /* Center horizontally relative to the text block */
   gap: 12px;
   color: var(--text-dark);
   text-decoration: none;
   cursor: pointer;
   z-index: 10;
-  animation: scrollDownFadeIn 1.2s var(--ease-out-expo) 0.5s both;
+  animation: scrollDownFadeIn 1.6s cubic-bezier(0.7, 0, 0.3, 1) 0.8s both;
   transition: opacity 0.3s var(--ease-smooth), transform 0.3s var(--ease-smooth);
 }
 
 .scroll-down:hover {
-  transform: translate(-50%, 4px);
-}
-
-/* Stylized Bottle silhouette representing a mouse / bottle outline */
-.scroll-down-bottle {
-  width: 24px;
-  height: 42px;
-  border: 2px solid var(--text-dark);
-  border-radius: 12px 12px 8px 8px;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  padding-top: 6px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-}
-
-/* Droplet animation representing a drink droplet sliding down inside the bottle */
-.scroll-down-droplet {
-  width: 4px;
-  height: 8px;
-  background: var(--text-dark);
-  border-radius: 2px;
-  animation: dropletSlide 2.4s cubic-bezier(0.25, 1, 0.5, 1) infinite;
+  transform: translateY(4px);
 }
 
 .scroll-down-arrow {
@@ -536,28 +511,6 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-@keyframes dropletSlide {
-  0% {
-    transform: translateY(0);
-    opacity: 0;
-    height: 4px;
-  }
-  15% {
-    opacity: 1;
-    height: 8px;
-  }
-  65% {
-    transform: translateY(16px);
-    opacity: 1;
-    height: 6px;
-  }
-  85%, 100% {
-    transform: translateY(20px);
-    opacity: 0;
-    height: 4px;
-  }
 }
 
 @keyframes arrowBounce {
@@ -572,13 +525,11 @@ button {
 @keyframes scrollDownFadeIn {
   from {
     opacity: 0;
-    transform: translate(-50%, 24px);
-    filter: blur(8px);
+    transform: translateY(24px);
   }
   to {
     opacity: 1;
-    transform: translate(-50%, 0);
-    filter: blur(0);
+    transform: translateY(0);
   }
 }
 
@@ -588,7 +539,7 @@ button {
   justify-content: center;
   gap: 16px;
   flex-wrap: wrap;
-  animation: fadeSlideUp 1.2s var(--ease-out-expo) 0.4s both;
+  animation: fadeSlideUp 1.6s cubic-bezier(0.7, 0, 0.3, 1) 0.6s both;
 }
 
 /* Buttons */
@@ -1558,27 +1509,23 @@ button {
   from {
     opacity: 0;
     transform: translateY(24px);
-    filter: blur(8px);
   }
   to {
     opacity: 1;
     transform: translateY(0);
-    filter: blur(0);
   }
 }
 
 .reveal {
   opacity: 0;
   transform: translateY(30px);
-  filter: blur(8px);
-  transition: opacity 1.2s var(--ease-out-expo), transform 1.2s var(--ease-out-expo), filter 1s var(--ease-out-expo);
-  will-change: transform, opacity, filter;
+  transition: opacity 1.6s cubic-bezier(0.7, 0, 0.3, 1), transform 1.6s cubic-bezier(0.7, 0, 0.3, 1);
+  will-change: transform, opacity;
 }
 
 .reveal.visible {
   opacity: 1;
   transform: translateY(0);
-  filter: blur(0);
 }
 
 .reveal-delay-1 { transition-delay: 0.15s; }
