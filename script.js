@@ -6,8 +6,22 @@
 
 document.addEventListener('DOMContentLoaded', () => {
   // ============================================
-  // NAVBAR — Scroll Behavior (Disabled as navbar is static)
+  // NAVBAR — Scroll Behavior
   // ============================================
+  const handleNavbarScroll = () => {
+    const navbarEl = document.getElementById('navbar');
+    if (!navbarEl) return;
+    
+    // Munculkan navbar saat di-scroll melewati 100px
+    if (window.scrollY > 100) {
+      navbarEl.classList.add('scrolled');
+    } else {
+      navbarEl.classList.remove('scrolled');
+    }
+  };
+
+  window.addEventListener('scroll', handleNavbarScroll, { passive: true });
+  handleNavbarScroll();
 
   // ============================================
   // MOBILE MENU
