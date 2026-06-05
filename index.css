@@ -4,7 +4,32 @@
    ============================================ */
 
 /* --- Google Fonts --- */
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+
+/* --- Custom Local Fonts --- */
+@font-face {
+  font-family: 'Quizlo';
+  src: url('fonts/Quizlo.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Hawaiian Punk';
+  src: url('fonts/HawaiianPunk.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Hotline';
+  src: url('fonts/Hotline.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 
 /* --- CSS Custom Properties --- */
 :root {
@@ -43,6 +68,7 @@
   --font-display: 'Outfit', sans-serif;
   --font-body: 'Inter', sans-serif;
   --font-serif: 'Playfair Display', serif;
+  --font-beverage: 'Hotline', sans-serif;
 
   /* Spacing */
   --section-gap: 80px;
@@ -464,18 +490,18 @@ button {
 }
 
 .hero-title {
-  font-family: var(--font-display);
-  font-size: clamp(3rem, 8vw, 6rem);
-  font-weight: 900;
-  line-height: 1.05;
-  letter-spacing: -0.04em;
+  font-family: var(--font-beverage);
+  font-size: clamp(3.2rem, 8vw, 6.2rem);
+  font-weight: normal;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
   color: var(--text-dark);
+  -webkit-text-fill-color: var(--text-dark);
+  -webkit-text-stroke: 1px #FFFFFF;
+  filter: drop-shadow(0px 4px 12px rgba(0, 0, 0, 0.12));
+  display: inline-block;
   margin-bottom: 24px;
   animation: fadeSlideUp 1.6s cubic-bezier(0.7, 0, 0.3, 1) 0.4s both;
-}
-
-.hero-title .highlight {
-  color: var(--text-dark);
 }
 
 .hero-description {
